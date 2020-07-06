@@ -5,11 +5,9 @@ html {
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 	display: flex; 
-	width: 90%;
 	justify-content: center;
 	align-items: center;
 	font-size: 1em;
-	flex-flow: row wrap;
 }
 
 .container{
@@ -29,15 +27,10 @@ h4 {
 	text-transform: uppercase;
 	font-weight: 700;
 }
-h1 {
-	font-size: 1.875em;
-}
 h2 {
     font-size: 1.5em;
 }
-h3 {
-	font-size: 1.125em;
-}
+
 h4 {
 	font-size: .75em;
 }
@@ -45,13 +38,12 @@ h4 {
 p {
 	font-size: 0.875em;
 	line-height: 21px;
-    padding: 0 30px;
 }
 
 /*The widths are in a percentage!*/
 header {
 	border-bottom: 3px solid #77a466;
-	width: 90%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -61,6 +53,7 @@ header {
 header h1 {
 	margin: 0;
 	padding: 38px 0;
+	font-size: 1.875em;
 }
 header h1 span {
 	color: #77a466;
@@ -88,56 +81,34 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
-	margin: 0 auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 90%;
 	flex-flow: row wrap;
 }
 
-.main-image {
-	height: auto;
-}
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
 }
 
-.main-title {
-	height: auto;
-}
 .main-title h3 {
 	text-align: left;
 	padding: 5px 0;
 	color: #77a466;
+	font-size: 1.125em;
 }
 .main-title p {
 	padding: 0;
-	font-size: 16px;
-	line-height: 25px;
+	font-size: 1em;
+	line-height: 1.5625em;
 }
 
 .section-one,
 .section-two,
 .section-three {
-	width: 33%;
-	height: auto;
+	width: 100%;
 	border-top: 1px solid #eee;
-}
-
-.section-one h4 {
-	padding: 10px 0;
-}
-
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-}
-
-.section-two h4,
-.section-three h4 {
-	padding: 10px 30px;
 }
 
 .menu {
@@ -151,19 +122,20 @@ header nav ul li a{
 
 .reviews {
 	color: #333;
-	font-size: 16px;
-	line-height: 21px;
+	font-size: 1em;
+	line-height: 1.3125em;
 }
 
 .address {
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 1em;
+	line-height: 1.5em;
 }
 
 /*The widths are in a percentage!*/
 footer {
 	border-top: 3px solid #eee;
 	text-align: center;
+	width: 100%;
 	display: flex; 
 	justify-content: center;
 	align-items: center;
@@ -173,5 +145,44 @@ footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
-	font-size: 14px;
+	font-size: 0.875em;
+}
+
+/*----- Tablet Styles -----*/
+@media all and (min-width: 768px) {
+	.bottom-section {
+		justify-content: space-between;
+		align-items: flex-start;
+		border-top: 3px solid #eee;
+
+	}
+	.section-one,
+	.section-two,
+	.section-three {
+		border-top: none;
+		flex-basis: 30%;
+	}
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+		padding: 0 15px;
+	}
+}
+/*----- Desktop Styles -----*/
+@media all and (min-width: 768px) {
+	header {
+		justify-content: space-between;
+	}
+	header h1 {
+		width: 30%;
+		padding: 0;
+		text-align: left; 
+	}
+	header nav {
+		width: 50%;
+	}
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
 }
